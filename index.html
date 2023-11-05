@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+
+</head>
+<body>
+  <main>
+    <div :class="display">
+      <div class="frontFace">
+        <h1 v-show="show">جاري تحديد موقعك</h1>
+      </div>
+      <div class="backFace">
+        <i :class="weatherIcons"></i>
+        <h1>{{ weather }}</h1>
+        <h2>{{ animateTemp }}{{ temp.unit }}</h2>
+        <small @click="C2F">Deg. F <span>&harr;</span> Deg. C</small>
+        <h4>الموقع: <strong>{{ cityName }}, {{ country }}</strong>.</h4>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
